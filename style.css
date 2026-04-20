@@ -1,0 +1,279 @@
+/* estilo geral do site */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0; /* remove a borda */
+    background-color: #f5f7fa;
+}
+
+/* modificacao do layout principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* modificacao do lado esquerdo do menu*/
+.left {
+    width: 50%;
+}
+
+/* imagem principal */
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 20px 20px 0;
+}
+
+/* modificacao do lado direito do menu*/
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    background: #e9eef5;
+}
+
+/* botoes de navegacao */
+.btn {
+    width: 70%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid #2c7be5;
+    color: #2c7be5;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #2c7be5;
+    color: white;
+    transform: scale(1.05);
+}
+
+h1 {
+    color:#cbbbdd;
+    text-align: center;
+}
+
+h2 {
+    color:#332e46;
+    margin-top: 30px;
+}
+
+p {
+    color:#2b2929;
+}
+
+/* imagens gerais, medicos, ambiente, etc... sem que afete a inicial */
+img:not(.main-img) {
+    width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* conserto para evitar bug*/
+div:not(.container):not(.left):not(.right) {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+button {
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a5edb;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    width: 250px;  
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+}
+
+/* tipo de scroll */
+html {
+    scroll-behavior: smooth;
+}
+/* galeria do nosso espaco*/
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.galeria img {
+    width: 95%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* equipe */
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* cards da equipe */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* topo do site */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #2c7be5, #6ea8fe);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/*para modificar o sobre*/
+.sobre {
+    display: flex;
+    justify-content: center;
+    background:#1c67c9;
+    padding: 60px 20px;
+}
+
+/* organiza texto e imagem */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    text-align: center;
+    color: #2c7be5;
+    margin-bottom: 30px;
+}
+
+.sobre-texto p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sobre-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-img img {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* informacoes de contato*/
+.info-contato {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    max-width: 300px;
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    margin: 20px auto; 
+    text-align: center;
+}
+
+/* titulo */
+.info-contato h3 {
+    color: #2c7be5;
+    margin-bottom: 15px;
+}
+
+/* texto */
+.info-contato p {
+    margin: 20px auto;
+    text-align: center;
+    margin: 10px 0;
+    color: #444;
+    font-size: 15px;
+}
+
+/* contato centralizado */
+#contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* centraliza a secao de servicos */
+#servicos {
+    text-align: center;
+}
+
+/* centraliza a lista de servicos */
+#servicos ul {
+    list-style-position: inside;
+    padding: 0;
+}
+/* aumenta o espacamento entre servicos*/
+#servicos li {
+    margin: 20px 0;
+}
